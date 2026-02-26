@@ -1,0 +1,18 @@
+<!-- autoload_configs/sip_pcap.conf.xml -->
+<configuration name="sip_pcap.conf" description="SIP Signaling PCAP Capture">
+  <settings>
+    <!--
+      Master switch for the module.
+      Per-call capture is ALSO controlled by the SIP profile param
+      capture_signaling_packets=true (or the channel variable).
+    -->
+    <param name="enabled"    value="true"/>
+
+    <!--
+      Directory where .pcap files are written.
+      Must be writable by the freeswitch process.
+      Default: /usr/local/freeswitch/log
+    -->
+    <param name="output-dir" value="/var/log/freeswitch/sip_pcap"/>
+  </settings>
+</configuration>
